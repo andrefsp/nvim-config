@@ -9,11 +9,9 @@ vim.cmd.highlight("Normal ctermbg=NONE guibg=NONE")
 vim.cmd.highlight("NonText ctermbg=NONE guibg=NONE")
 vim.cmd.highlight("LineNr ctermbg=NONE guibg=NONE")
 
-
-vim.opt.tabstop = 2      -- Number of spaces a tab counts for
-vim.opt.shiftwidth = 2   -- Number of spaces for auto-indent
+vim.opt.tabstop = 2 -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 2 -- Number of spaces for auto-indent
 vim.opt.expandtab = true -- Use spaces instead of tabs
-
 
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -24,14 +22,8 @@ vim.g.maplocalleader = "\\"
 -- lazy.vim installation and configuration
 require("config.lazy")
 
--- fzf-lua(https://github.com/ibhagwan/fzf-lua) plugin
-require("config.fzf")
-
 ---- render-markdown.nvim(https://github.com/MeanderingProgrammer/render-markdown.nvim) plugin
 require("config.rendermarkdown")
-
--- coc(https://github.com/neoclide/coc.nvim) plugin configuration
-require("config.coc")
 
 -- code companion(https://github.com/olimorris/codecompanion.nvim) plugin configuration
 require("config.codecompanion")
@@ -42,28 +34,27 @@ require("config.lualine")
 -- nvim-treesitter(https://github.com/nvim-treesitter/nvim-treesitter) plugin configuration
 require("config.treesitter")
 
+-- https://github.com/neovim/nvim-lspconfig
+-- https://neovim.io/doc/user/lsp.html
+require("config.lsp")
+
+-- https://github.com/mason-org/mason.nvim
+require("config.mason")
+
+-- https://github.com/stevearc/conform.nvim
+require("config.conform")
+
 -- colorschemes plugins
 --
 -- https://github.com/rebelot/kanagawa.nvim
-require("config.kanagawa")
+require("colorschemes.kanagawa")
 
 -- https://github.com/EdenEast/nightfox.nvim
-require("config.nightfox")
+require("colorschemes.nightfox")
+
+-- keymap settings
+require("config.keymaps")
 
 -- set color scheme theme
-vim.cmd.colorscheme("nightfox")
-
-
-
--- Plugin key mappings
-
--- ## Fzflua
--- :FzfLua git_files
-vim.keymap.set('n', '<leader>fg', function()
-  vim.cmd('FzfLua git_files')
-end, { desc = 'FzfLua git files' })
-
--- :FzfLua git_blame
-vim.keymap.set('n', '<leader>fb', function()
-  vim.cmd('FzfLua git_blame')
-end, { desc = 'FzfLua git blame' })
+--vim.cmd.colorscheme("nightfox")
+vim.cmd.colorscheme("kanagawa")

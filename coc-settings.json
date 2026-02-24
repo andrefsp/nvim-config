@@ -1,5 +1,0 @@
-{
-	"coc.preferences.jumpCommand": "vsplit",
-	"coc.preferences.formatOnSave": true,
-	"coc.preferences.formatOnType": true
-}
