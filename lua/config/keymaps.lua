@@ -9,6 +9,10 @@ vim.keymap.set("n", "<leader>fb", function()
 	vim.cmd("FzfLua git_blame")
 end, { desc = "FzfLua git blame" })
 
+-- LSP key
+-- Go to definition
+vim.keymap.set("n", "grd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
 -- # LSP  https://neovim.io/doc/user/lsp.html#i_CTRL-S
 --  These GLOBAL keymaps are created unconditionally when Nvim starts:
 --  "gra" (Normal and Visual mode) is mapped to vim.lsp.buf.code_action()
