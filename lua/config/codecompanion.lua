@@ -1,13 +1,13 @@
 require("codecompanion").setup({
 	interactions = {
 		chat = {
-			adapter = "gemini_cli",
+			adapter = "goose",
 		},
 		inline = {
-			adapter = "gemini_cli",
+			adapter = "goose",
 		},
 		cmd = {
-			adapter = "gemini_cli",
+			adapter = "goose",
 		},
 	},
 	display = {

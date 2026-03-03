@@ -28,9 +28,6 @@ require("config.rendermarkdown")
 -- code companion(https://github.com/olimorris/codecompanion.nvim) plugin configuration
 require("config.codecompanion")
 
--- lualine plugin (https://github.com/nvim-lualine/lualine.nvim) configuration.
-require("config.lualine")
-
 -- nvim-treesitter(https://github.com/nvim-treesitter/nvim-treesitter) plugin configuration
 require("config.treesitter")
 
@@ -43,6 +40,9 @@ require("config.mason")
 
 -- https://github.com/stevearc/conform.nvim
 require("config.conform")
+
+-- lualine plugin (https://github.com/nvim-lualine/lualine.nvim) configuration.
+require("config.lualine")
 
 -- colorschemes plugins
 --

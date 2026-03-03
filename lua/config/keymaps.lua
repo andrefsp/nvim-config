@@ -11,7 +11,8 @@ end, { desc = "FzfLua git blame" })
 
 -- LSP key
 -- Go to definition
-vim.keymap.set("n", "grd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "grd", vim.lsp.buf.definition, { noremap = true, silent = true })
+vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "LSP: Rename" })
 
 -- # LSP  https://neovim.io/doc/user/lsp.html#i_CTRL-S
 --  These GLOBAL keymaps are created unconditionally when Nvim starts:
@@ -24,3 +25,8 @@ vim.keymap.set("n", "grd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = 
 --  breakCTRL-S (Insert mode) is mapped to vim.lsp.buf.signature_help()
 --  "an" and "in" (Visual and Operator-pending mode) are mapped to outer and inner incremental selections, respectively, using vim.lsp.buf.selection_range()
 --
+
+-- Paste in visual mode without yanking the replaced text.
+-- Sends the replaced text to the black hole register ("_) so the original
+-- yank is preserved, allowing multiple paste-overs.
+vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true, desc = "Paste without yanking replaced text" })
