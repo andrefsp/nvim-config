@@ -1,7 +1,8 @@
-require('nvim-treesitter.configs').setup({
+require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"go",
 		"python",
+		"rust",
 		"html",
 		"javascript",
 		"typescript",
@@ -16,6 +17,6 @@ require('nvim-treesitter.configs').setup({
 		additional_vim_regex_highlighting = false,
 	},
 	indent = {
-		enable = true
-	}
+		enable = true,
+	},
 })

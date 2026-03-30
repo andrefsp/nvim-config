@@ -58,3 +58,6 @@ require("config.keymaps")
 -- set color scheme theme
 --vim.cmd.colorscheme("nightfox")
 vim.cmd.colorscheme("kanagawa")
+
+-- Do not fold the code in diffmode('-d' option)
+vim.opt.diffopt:append("context:99999")
