@@ -1,12 +1,12 @@
 -- # Fzf
 -- :FzfLua git_files
 vim.keymap.set("n", "<leader>fg", function()
-	vim.cmd("FzfLua git_files")
+  vim.cmd("FzfLua git_files")
 end, { desc = "FzfLua git files" })
 
 -- :FzfLua git_blame
 vim.keymap.set("n", "<leader>fb", function()
-	vim.cmd("FzfLua git_blame")
+  vim.cmd("FzfLua git_blame")
 end, { desc = "FzfLua git blame" })
 
 -- LSP key

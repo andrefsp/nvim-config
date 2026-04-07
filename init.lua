@@ -59,5 +59,14 @@ require("config.keymaps")
 --vim.cmd.colorscheme("nightfox")
 vim.cmd.colorscheme("kanagawa")
 
+-- Enable diagnostic display (virtual text, signs, underlines)
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 -- Do not fold the code in diffmode('-d' option)
 vim.opt.diffopt:append("context:99999")

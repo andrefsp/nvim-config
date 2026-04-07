@@ -1,5 +1,5 @@
 require('nightfox').setup({
-	options = {
-		transparent = true, -- Disable setting background
-	}
+  options = {
+    transparent = true, -- Disable setting background
+  }
 })

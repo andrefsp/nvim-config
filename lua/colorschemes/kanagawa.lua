@@ -1,3 +1,3 @@
 require('kanagawa').setup({
-	transparent = true, -- Disable setting background
+  transparent = true, -- Disable setting background
 })
